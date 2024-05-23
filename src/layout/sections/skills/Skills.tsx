@@ -8,9 +8,9 @@ import {SectionTitle} from "../../../componets/SectionTitle";
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>My skills</SectionTitle>
+            <SectionTitle>My Skills</SectionTitle>
 
-            <FlexWrapper wrap={"wrap"}>
+            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                 <Skill iconId={"html5"}
                        title={"HTML5"}
                        text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
