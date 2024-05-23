@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const Menu = () => {
     return (
-        <nav>
-            <StyledMenu>
+        <StyledMenu>
+            <ul>
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -20,14 +20,14 @@ export const Menu = () => {
                 <li>
                     <a href="#">Contact</a>
                 </li>
-            </StyledMenu>
-        </nav>
+            </ul>
+        </StyledMenu>
     );
 };
 
-const StyledMenu = styled.ul`
-    text-decoration: none;
-    display: flex;
-    gap: 20px;
-    list-style-type: none;
+const StyledMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+    }
 `
