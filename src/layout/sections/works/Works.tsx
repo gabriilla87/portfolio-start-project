@@ -29,7 +29,7 @@ export const Works = () => {
     );
 };
 
-const StyledWorks = styled.div`
+const StyledWorks = styled.section`
     height: 100vh;
     background-color: #fff1a1;
 `
