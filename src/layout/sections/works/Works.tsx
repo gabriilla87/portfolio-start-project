@@ -3,33 +3,37 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../componets/SectionTitle";
 import {FlexWrapper} from "../../../componets/FlexWraper";
 import {Work} from "../../../componets/work/Work";
-import {Menu} from "../../../componets/menu/Menu";
+import {TabMenu} from "./tabMenu/TabMenu";
 import socialImg from "../../../assets/img/social.png";
 import countdownImg from "../../../assets/img/countdown.png";
+import {Container} from "../../../componets/Container";
 
 const worksItems = ["ALL", "LANDING PAGE", "REACT", "SPA"]
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>My Works</SectionTitle>
+            <Container>
+                <SectionTitle>My Works</SectionTitle>
 
-            <Menu menuItems={worksItems}/>
+                <TabMenu menuItems={worksItems}/>
 
-            <FlexWrapper justify={"space-around"}>
-                <Work title={"Social Network"}
-                      text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
-                      src={socialImg}/>
-                <Work title={"Timer"}
-                      text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"}
-                      src={countdownImg}/>
-            </FlexWrapper>
+                <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
+                    <Work title={"Social Network"}
+                           text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+                          src={socialImg}/>
+                    <Work title={"Timer"}
+                          text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"}
+                          src={countdownImg}/>
+                </FlexWrapper>
+            </Container>
         </StyledWorks>
 
     );
 };
 
 const StyledWorks = styled.section`
-    height: 100vh;
-    background-color: #fff1a1;
+    ${FlexWrapper} {
+        gap: 30px;
+    }
 `
