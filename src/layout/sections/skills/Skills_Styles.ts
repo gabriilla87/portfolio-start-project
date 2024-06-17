@@ -1,29 +1,7 @@
-import React from 'react';
+import {theme} from "../../../styles/Theme";
 import styled from "styled-components";
-import {Icon} from "../icon/Icon";
-import {FlexWrapper} from "../FlexWraper";
-import {theme} from "../../styles/Theme";
 
-type SkillPropsType = {
-    iconId: string
-    title: string
-    text: string
-    align?: string
-}
-
-export const Skill = (props: SkillPropsType) => {
-    return (
-        <StyledSkill>
-            <FlexWrapper direction={"column"} align={"center"}>
-                <IconWrapper>
-                    <Icon iconId={props.iconId}/>
-                </IconWrapper>
-                <SkillTitle>{props.title}</SkillTitle>
-                <SkillText>{props.text}</SkillText>
-            </FlexWrapper>
-        </StyledSkill>
-    );
-};
+// Skill
 
 const StyledSkill = styled.div`
     width: 330px;
@@ -61,3 +39,17 @@ const SkillTitle = styled.h3`
 const SkillText = styled.p`
     text-align: center;
 `
+
+// Skills
+
+const StyledSkills = styled.section`
+
+`
+
+export const S = {
+    StyledSkill,
+    StyledSkills,
+    IconWrapper,
+    SkillTitle,
+    SkillText
+}

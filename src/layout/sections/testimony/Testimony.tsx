@@ -3,19 +3,19 @@ import styled from "styled-components";
 import {Icon} from "../../../componets/icon/Icon";
 import {SectionTitle} from "../../../componets/SectionTitle";
 import {Slider} from "../../../componets/slider/Slider";
-import {FlexWrapper} from "../../../componets/FlexWraper";
-import {IconWrapper} from "../../../componets/skill/Skill";
+import {FlexWrapper} from "../../../componets/FlexWrapper";
 import {Container} from "../../../componets/Container";
+import {S} from "../skills/Skills_Styles";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
         <StyledTestimony>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <IconWrapper>
+                    <S.IconWrapper>
                         <Icon iconId={"quote"}/>
-                    </IconWrapper>
+                    </S.IconWrapper>
                     <Slider/>
                 </FlexWrapper>
             </Container>
@@ -25,7 +25,7 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-    ${IconWrapper} {
+    ${S.IconWrapper} {
         margin: 28px 0 72px;
     }
 `
